@@ -6,7 +6,7 @@
 import math
 
 number = 1
-size = 240
+size = 256
 max_value = 1023
 expo = math.log(max_value)/(size - 1)
 sin_arg = math.pi / (2 * size)
@@ -17,11 +17,11 @@ fh.write("table_high:\n")
 fh.write("\tmovwf\tPCL")
 
 fl = open("intensities_low.inc", "w")
-fl.write("\torg 0x1FF\n")
+fl.write("\torg 0x1EF\n")
 fl.write("table_low:\n")
 fl.write("\tmovwf\tPCL")
 
-for row in range(15):
+for row in range(16):
     fh.write("\n\t dt ")
     fl.write("\n\t dt ")
     for column in range(16):
@@ -33,17 +33,6 @@ for row in range(15):
         if (column != 15):
             fh.write(", ")
             fl.write(", ")
-
-fh.write("\n\t dt ")
-fl.write("\n\t dt ")
-for column in range(8):
-    value = 1023
-    fh.write(hex(int(value / 4)))
-    fl.write(hex(value & 3))
-    if (column != 7):
-        fh.write(", ")
-        fl.write(", ")
-
             
 fh.write("\n")
 fh.close()

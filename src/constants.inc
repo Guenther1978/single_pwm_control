@@ -7,5 +7,5 @@
 ;;
 
 LED             equ 0x02
-SIZE            equ 0xF0
+SIZE            equ 0xFF
 

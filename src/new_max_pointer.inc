@@ -9,9 +9,10 @@
 
 new_max_pointer:
         call    random16
-        movf    RandLo, w
-        andlw   0xF0
-        iorlw   0x80
+        movf    pointer_min, w
+        subwf   RandHi, w
+        btfsc   STATUS, C
+        goto    new_max_pointer
         movwf   pointer_max
         return
 
