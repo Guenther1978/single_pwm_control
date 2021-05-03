@@ -1,6 +1,6 @@
 ;;
 ; @file
-; @fn speedControl
+; @fn speed_control
 ; @brief Controls the Speed
 ;
 ; This function is called, when an timer oberflow occurs.

@@ -1,6 +1,6 @@
 ;;
 ; @file
-; @fm stop_pwm
+; @fn stop_pwm
 ; @brief stops the pwm output
 ;
 ; If the duty cycle of the pwm should be changed, the capture compare
