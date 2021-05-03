@@ -67,3 +67,10 @@ dkms.conf
 # Ignore created files by gpasm
 *.lst
 *.cod
+
+# Ignore files created by MPLAB
+*.err
+*.cof
+*.mcp
+*.mcs
+*.mcw
