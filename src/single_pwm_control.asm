@@ -40,7 +40,7 @@ table_read_test:
 
         #include "timer1Config.inc"
         #include "timer2Config.inc"
-        call    init_random
+        call    random_init
 
         clrf    darker
         clrf    pointer
