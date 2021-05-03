@@ -11,7 +11,7 @@ new_max_pointer:
         call    random16
         movf    RandLo, w
         andlw   0xF0
-        iorwf   0x80
+        iorlw   0x80
         movwf   pointer_max
         return
 
