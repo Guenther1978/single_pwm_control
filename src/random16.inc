@@ -14,6 +14,7 @@ random16:
         rlf     W, F
         swapf   RandHi, F
         swapf   RandLo, W
+        rlf     W, W
         rlf     W, F
         xorwf   RandHi, W
         swapf   RandHi, F
