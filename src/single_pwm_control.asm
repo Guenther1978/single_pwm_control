@@ -46,7 +46,7 @@ table_read_test:
         clrf    pointer
         clrf    intensity_high
         clrf    intensity_low
-        movlw   SIZE
+        movlw   MAX
         movwf   pointer_max
         movlw   1
         movwf   pointer_min
