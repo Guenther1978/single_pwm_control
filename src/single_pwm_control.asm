@@ -48,7 +48,7 @@ table_read_test:
         clrf    intensity_low
         movlw   SIZE
         movwf   pointer_max
-        movlw   0
+        movlw   1
         movwf   pointer_min
 
         ; Enable global interrupts
