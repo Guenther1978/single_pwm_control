@@ -12,12 +12,12 @@ expo = math.log(max_value)/(size - 1)
 sin_arg = math.pi / (2 * size)
 
 fh = open("intensities_high.inc", "w")
-fh.write("\torg 0x200\n")
+fh.write("\torg 0x300\n")
 fh.write("table_high:\n")
 fh.write("\tmovwf\tPCL")
 
 fl = open("intensities_low.inc", "w")
-fl.write("\torg 0x100\n")
+fl.write("\torg 0x200\n")
 fl.write("table_low:\n")
 fl.write("\tmovwf\tPCL")
 
