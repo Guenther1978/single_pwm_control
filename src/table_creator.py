@@ -7,7 +7,7 @@ import math
 
 number = 1
 size = 255
-max_value = 1023
+max_value = 300
 expo = math.log(max_value)/(size - 1)
 sin_arg = math.pi / (2 * size)
 
