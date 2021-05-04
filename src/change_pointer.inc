@@ -14,7 +14,6 @@ change_pointer:
 
 dimm_LED:
         decf    pointer, f
-        incf    pointer_min, w
         subwf   pointer, w
         btfss   STATUS, Z
         goto    return_change_pointer
