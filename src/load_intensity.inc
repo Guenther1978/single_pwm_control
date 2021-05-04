@@ -8,6 +8,8 @@ load_intensity:
     addlw   0x01
     movwf   PCLATH
     movf    offset, w
+    btfsc   STATUS, Z
+    incf    offset, w
     call    table_high
     movwf   intensity_high
 
@@ -20,6 +22,8 @@ load_intensity:
     addlw   0x01
     movwf   PCLATH
     movf    offset, w
+    btfsc   STATUS, Z
+    incf    offset, w
     call    table_low
     movwf   intensity_low
 
