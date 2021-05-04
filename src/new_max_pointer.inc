@@ -15,7 +15,13 @@ new_max_pointer:
         call    random16
         movf    RandHi, w
         addwf   pointer_min, w
-        btfss   STATUS, C
+        btfsc   STATUS, C
         movwf   pointer_max
+        sublw   MAX
+        btfss   STATUS, C
+        goto    return_from_new_pointer
+        movlw   MAX
+        movwf   pointer_max
+return_from_new_pointer:
         return
 

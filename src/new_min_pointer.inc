@@ -12,8 +12,8 @@
 
 new_min_pointer:
         call    random16
-        movf    pointer_max, w
-        subwf   RandHi, w
-        btfss   STATUS, C
+        movf    RandHi, w
+        subwf   pointer_max, w
+        btfsc   STATUS, C
         movwf   pointer_min
         return
