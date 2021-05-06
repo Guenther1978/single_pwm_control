@@ -33,14 +33,16 @@
 #include "new_duration.inc"
 #include "new_min_pointer.inc"
 #include "new_max_pointer.inc"
+#include "uart.inc"
 
 table_read_test:
-    	bcf	    STATUS, RP0
-	    bcf     STATUS, RP1
+	bcf     STATUS, RP0
+	bcf     STATUS, RP1
 
         #include "timer1Config.inc"
         #include "timer2Config.inc"
         call    random_init
+        call    uart_init        
 
         clrf    darker
         clrf    pointer
