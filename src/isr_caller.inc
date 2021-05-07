@@ -4,7 +4,7 @@
 ; @brief This ISR calls the interrupt handlers
 ;;
 
-isr_caller:
+isr_handler:
         movwf   w_temp
         swapf   STATUS, w
         bcf     STATUS, RP0
