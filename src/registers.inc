@@ -20,4 +20,5 @@ pointer             ; 0x2c
 pointer_min         ; 0x2f
 pointer_max         ; 0x2e
 offset				; 0x2f
+received_byte       ; 0x30
         endc
