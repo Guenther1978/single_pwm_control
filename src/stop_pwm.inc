@@ -9,7 +9,7 @@
 
 stop_pwm:
         bsf     STATUS, RP0
-        bsf     TRISC, LED
+        bsf     TRISB, LED
         bcf     STATUS, RP0
         clrf    CCP1CON
 

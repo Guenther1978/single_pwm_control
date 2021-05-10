@@ -17,7 +17,7 @@ init_timer_1:
 
         ; Configure and start timer 1
         bcf     T1CON, T1CKPS1
-        bcf     T1CON, T1CKPS0
+        bsf     T1CON, T1CKPS0
         bsf     STATUS, RP0
         bsf     PIE1, TMR1IE
         bcf     STATUS, RP0

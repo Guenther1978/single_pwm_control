@@ -2,11 +2,26 @@
 ; @brief This file contains constants
 ;;
 
+
 ;;
 ; @def LED pin with pwm output
 ;;
 
-LED     equ 0x02
+RX     equ 0x01
+
+
+;;
+; @def LED pin with pwm output
+;;
+
+TX     equ 0x02
+
+
+;;
+; @def LED pin with pwm output
+;;
+
+LED     equ 0x03
 
 
 ;;
@@ -17,10 +32,17 @@ MAX     equ 0xFE
 
 
 ;;
-; @def SEND this byte cause the uart to send
+; @def SEND this byte cause the uart to send contineous
 ;;
 
-SEND    equ 'S'
+SEND_CONTINEOUS equ 'C'
+
+
+;;
+; @def SEND this byte cause the uart to send one time
+;;
+
+SEND_SINGLE    equ 'S'
 
 
 ;;

@@ -7,11 +7,10 @@
 ; is enabled.
 ;;
 
-#define	__16F886
-#include <p16f886.inc>
+#define	__16F627A
+#include <p16f627A.inc>
 
-	__CONFIG    _CONFIG1, _LVP_OFF & _FCMEN_OFF & _IESO_OFF & _BOR_OFF & _CPD_OFF & _CP_OFF & _MCLRE_ON & _PWRTE_ON & _WDT_OFF & _INTRC_OSC_NOCLKOUT
-	__CONFIG    _CONFIG2, _WRT_OFF & _BOR21V
+	__CONFIG   _CP_OFF & _LVP_OFF  & _WDT_OFF & _PWRTE_ON & _INTOSC_OSC_NOCLKOUT & _BOREN_OFF & _MCLRE_OFF
 
 #include "registers.inc"
 #include "constants.inc"

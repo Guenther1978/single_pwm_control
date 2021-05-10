@@ -11,8 +11,8 @@ uart_init:
 ; switch to bank 1
         bsf     STATUS, RP0
         bcf     STATUS, RP1
-        bsf     TRISC, 6
-        bsf     TRISC, 7
+        bsf     TRISB, RX
+        bsf     TRISB, TX
         movlw   0x19
         movwf   SPBRG
         bcf     TXSTA, TX9
@@ -24,7 +24,7 @@ uart_init:
 ; switch to bank 3
         bsf     STATUS, RP0
         bsf     STATUS, RP1
-        bcf     BAUDCTL, SCKP
+;        bcf     BAUDCTL, SCKP
 
 ; switch to bank 0
         bcf     STATUS, RP0
@@ -39,7 +39,7 @@ uart_read:
         return
 
 uart_send:
-        movlw   SEND
+        movlw   SEND_CONTINEOUS
         subwf   received_byte
         btfss   STATUS, Z
         goto    return_uart_send
