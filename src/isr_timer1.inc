@@ -18,8 +18,7 @@ isr_timer_1:
         call    load_intensity
         call    send_intensity
         call    start_pwm
-        ;call    uart_read
-        call    uart_send
+        call    uart_test
 
 exit_isr_timer_1:
         return

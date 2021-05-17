@@ -21,10 +21,6 @@ uart_init:
         bsf     TXSTA, BRGH
         bsf     PIE1, RCIE
 
-; switch to bank 3
-        bsf     STATUS, RP0
-        bsf     STATUS, RP1
-;        bcf     BAUDCTL, SCKP
 
 ; switch to bank 0
         bcf     STATUS, RP0
@@ -38,11 +34,14 @@ uart_read:
         movwf   received_byte
         return
 
-uart_send:
+uart_test:
         movlw   SEND_CONTINEOUS
         subwf   received_byte
-        btfss   STATUS, Z
-        goto    return_uart_send
+        btfsc   STATUS, Z
+        call    uart_send
+        return
+        
+uart_send:
         movlw   0x20
         movwf   FSR
 next_byte:    
