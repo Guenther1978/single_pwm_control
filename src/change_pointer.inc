@@ -6,6 +6,8 @@ change_pointer:
         subwf   pointer_max, w
         btfss   STATUS, Z
         goto    return_change_pointer
+        btfss   STATUS, C
+        goto    return_change_pointer
         bsf     darker, LED
         call    new_duration
         call    new_min_pointer
@@ -17,6 +19,8 @@ dimm_LED:
         decf    pointer, w
         subwf   pointer_min, w
         btfss   STATUS, Z
+        goto    return_change_pointer
+        btfss   STATUS, C
         goto    return_change_pointer
         bcf     darker, LED
         call    new_duration
