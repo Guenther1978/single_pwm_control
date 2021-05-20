@@ -17,7 +17,7 @@
 
 
 	org 0
-	goto	table_read_test
+	goto	single_pwm_control
 
 	org 4
 
@@ -36,7 +36,7 @@
 #include "new_max_pointer.inc"
 #include "uart.inc"
 
-table_read_test:
+single_pwm_control:
 	bcf     STATUS, RP0
 	bcf     STATUS, RP1
 
