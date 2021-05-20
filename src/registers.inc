@@ -17,7 +17,7 @@ darker              ; 0x29
 intensity_high      ; 0x2a
 intensity_low       ; 0x2b
 pointer             ; 0x2c
-pointer_min         ; 0x2f
+pointer_min         ; 0x2d
 pointer_max         ; 0x2e
 offset				; 0x2f
 received_byte       ; 0x30
