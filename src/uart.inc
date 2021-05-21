@@ -42,7 +42,7 @@ uart_test:
         return
         
 uart_send:
-        movlw   0x20
+        movlw   0x28
         movwf   FSR
 next_byte:    
         btfss   PIR1, TXIF
@@ -50,7 +50,7 @@ next_byte:
         movf    INDF, w
         movwf   TXREG
         incf    FSR, f
-        movlw   0x31
+        movlw   0x2F
         subwf   FSR, w
         btfss   STATUS, Z
         goto    next_byte
