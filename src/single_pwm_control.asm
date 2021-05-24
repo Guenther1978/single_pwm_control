@@ -62,9 +62,10 @@ single_pwm_control:
         call    start_pwm
 
 mainloop:
-        goto    mainloop
+         goto    mainloop
 
 #include "intensities_high.inc"
 #include "intensities_low.inc"
         
         end
+
